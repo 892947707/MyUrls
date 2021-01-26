@@ -15,7 +15,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}:myurls
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/myurls
 
 jobs:
   # Run tests.
