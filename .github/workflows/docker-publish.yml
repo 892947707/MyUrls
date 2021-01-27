@@ -35,8 +35,8 @@ jobs:
 
       - name: Build image & Push Docker Image To Dockerhub
         run: |
-          docker build . --file Dockerfile --tag $IMAGE_NAME
-
+          docker-compose up -d
+          docker tag myurls_myurls:latest $IMAGE_NAME
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push $IMAGE_NAME
 
